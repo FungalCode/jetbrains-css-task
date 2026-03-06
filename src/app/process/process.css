@@ -1,0 +1,159 @@
+:root {
+    --mouse-y: 50%;
+    --mouse-x: 50%;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+.pyramid-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.pyramid-container div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease-out;
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pyramid-container div.isVisible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.pyramid-container::after {
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    background: cornflowerblue;
+    width: 100px;
+    height: 100px;
+    transition: opacity 0.3s ease;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    filter: blur(40px);
+    opacity: 0;
+}
+
+.pyramid-container:hover::after {
+    opacity: .6;
+}
+
+svg {
+    width: 80%;
+    max-width: 300px;
+    display: block;
+}
+
+svg {
+    --text: #000;
+    --gradient-1: #000;
+    --gradient-2: #000;
+    --gradient-3: #000;
+}
+
+.svg {
+    --text: white;
+    --gradient-1: #000;
+    --gradient-2: #000;
+    --gradient-3: #000;
+}
+
+#svg {
+    --gradient-1: #00CDD7;
+    --gradient-2: #000;
+    --gradient-3: #000;
+}
+
+#Level1 {
+    z-index: 1;
+}
+#Level2 {
+    width: 550px;
+    height: 550px;
+}
+#Level3 {
+    width: 500px;
+    height: 500px;
+}
+#Level4 {
+    width: 450px;
+    height: 450px;
+}
+#Level5 {
+    width: 400px;
+    height: 400px;
+}
+
+span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.description {
+    margin-top: .5rem;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    line-height: .9;
+    margin-top: 2rem;
+}
+
+button:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+    border: none;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.23);
+}

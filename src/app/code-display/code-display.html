@@ -1,0 +1,42 @@
+<div class="ide-window">
+    <div class="ide-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="filename">styles.css</span>
+    </div>
+
+    <div class="code-content">
+        @switch (level()) {
+            @case (1) {
+                <span class="sel">svg</span> {{ '{' }}
+                <span class="prop">--text</span>: <span class="val">#000</span>;
+                <span class="prop">--gradient-1</span>: <span class="val">#000</span>;
+                <span class="prop">--gradient-2</span>: <span class="val">#000</span>;
+                <span class="prop">--gradient-3</span>: <span class="val">#000</span>;
+                {{ '}' }}
+            }
+            @case (2) {
+                <span class="sel">.svg</span> {{ '{' }}
+                <span class="prop">--text</span>: <span class="val">white</span>;
+                <span class="prop">--gradient-1</span>: <span class="val">#000</span>;
+                <span class="prop">--gradient-2</span>: <span class="val">#000</span>;
+                <span class="prop">--gradient-3</span>: <span class="val">#000</span>;
+                {{ '}' }}
+            }
+            @case (3) {
+                <span class="sel">#svg</span> {{ '{' }}
+                <span class="prop">--gradient-1</span>: <span class="val">#00CDD7</span>;
+                <span class="prop">--gradient-2</span>: <span class="val">#000</span>;
+                <span class="prop">--gradient-3</span>: <span class="val">#000</span>;
+                {{ '}' }}
+            }
+            @case (4) {
+                <span class="punct">&lt;</span><span class="tag">svg</span> <span class="attr">style</span><span class="punct">=</span><span class="string">"--gradient-2: #2086D7; --gradient-3: #000;"</span><span class="punct">&gt;</span>
+            }
+            @case (5) {
+                <span class="punct">&lt;</span><span class="tag">svg</span> <span class="attr">style</span><span class="punct">=</span><span class="string">"--gradient-3: #FFF045 <span class="kw">!important</span>;"</span><span class="punct">&gt;</span>
+            }
+        }
+    </div>
+</div>
