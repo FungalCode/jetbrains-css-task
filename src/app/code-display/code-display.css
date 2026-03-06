@@ -5,7 +5,7 @@
     overflow: hidden;
     font-family: 'Consolas', 'Courier New', monospace;
     width: 100%;
-    min-width: 320px;
+    min-width: 400px;
     max-width: 500px;
     height: 250px;
     margin: 20px auto;
@@ -54,3 +54,10 @@
 .string { color: #ce9178; }
 .punct { color: #808080; }
 .kw { color: #c586c0; font-weight: bold; }
+
+@media screen and (width < 450px) {
+    .ide-window {
+        width: 90vw;
+        min-width: auto;
+    }
+}

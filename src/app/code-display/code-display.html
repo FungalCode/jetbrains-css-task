@@ -10,32 +10,49 @@
         @switch (level()) {
             @case (1) {
                 <span class="sel">svg</span> {{ '{' }}
+                <br>
                 <span class="prop">--text</span>: <span class="val">#000</span>;
+                <br>
                 <span class="prop">--gradient-1</span>: <span class="val">#000</span>;
+                <br>
                 <span class="prop">--gradient-2</span>: <span class="val">#000</span>;
+                <br>
                 <span class="prop">--gradient-3</span>: <span class="val">#000</span>;
+                <br>
                 {{ '}' }}
             }
             @case (2) {
                 <span class="sel">.svg</span> {{ '{' }}
+                <br>
                 <span class="prop">--text</span>: <span class="val">white</span>;
+                <br>
                 <span class="prop">--gradient-1</span>: <span class="val">#000</span>;
+                <br>
                 <span class="prop">--gradient-2</span>: <span class="val">#000</span>;
+                <br>
                 <span class="prop">--gradient-3</span>: <span class="val">#000</span>;
+                <br>
                 {{ '}' }}
             }
             @case (3) {
                 <span class="sel">#svg</span> {{ '{' }}
+                <br>
                 <span class="prop">--gradient-1</span>: <span class="val">#00CDD7</span>;
+                <br>
                 <span class="prop">--gradient-2</span>: <span class="val">#000</span>;
+                <br>
                 <span class="prop">--gradient-3</span>: <span class="val">#000</span>;
+                <br>
                 {{ '}' }}
             }
             @case (4) {
-                <span class="punct">&lt;</span><span class="tag">svg</span> <span class="attr">style</span><span class="punct">=</span><span class="string">"--gradient-2: #2086D7; --gradient-3: #000;"</span><span class="punct">&gt;</span>
+                <span class="punct">&lt;</span><span class="tag">svg</span>
+                <br> <span class="attr"> style</span><span class="punct">=</span><span class="string">"</span><br><span class="string"> --gradient-2: #2086D7;</span><br><span class="string"> --gradient-3: #000;"</span><br><span class="punct">&gt;</span>
             }
             @case (5) {
-                <span class="punct">&lt;</span><span class="tag">svg</span> <span class="attr">style</span><span class="punct">=</span><span class="string">"--gradient-3: #FFF045 <span class="kw">!important</span>;"</span><span class="punct">&gt;</span>
+                <span class="punct">&lt;</span><span class="tag">svg</span> 
+                <br>
+                <span class="attr"> style</span><span class="punct">=</span><span class="string">"</span><br><span class="string"> --gradient-3: #FFF045 <span class="kw">!important</span>;"</span><br><span class="punct">&gt;</span>
             }
         }
     </div>
