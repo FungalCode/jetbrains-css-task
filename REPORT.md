@@ -34,9 +34,9 @@
     Original Source: none  
 
 ## 3. Mapping Difficulties
-**Case 1: Inline Styles:**  
-    When using inline styles inside html, the mapping gets difficult since there's no generated CSS and therefore also no sourcemap.  
+**Case 1: Inline Styles**  
+    When using inline styles inside HTML, the mapping gets difficult since there's no generated CSS and therefore also no source map.  
 **Case 2: SVG Coloring**  
     My project includes a complex svg (the webstorm logo), which gets colored dynamically by changing CSS-variables inline. But DevTools only displays very limited information inside the Computed tab in this case, making this process difficult.  
-**Case 3: Computed:**  
-    My project also features a subtle hover effect when hovering the card stack/pyramid. This is done with the ::after pseudo-element and some typescript computation. It's difficult to find the actual source of the hover inside DevTools.  
+**Case 3: Computed**  
+    My project also features a subtle hover effect when hovering the card stack/pyramid. This is done with the ::after pseudo-element and some TypeScript computation. It's difficult to find the actual source of the hover inside DevTools.  
