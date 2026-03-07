@@ -1,15 +1,15 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "defaultProject": "css-task",
+  "newProjectRoot": "projects",
   "cli": {
     "packageManager": "npm",
-    "analytics": "c1c8b719-5e40-41c6-820f-b5f66c7cd1fa"
+    "analytics": "d46d5ab7-b81a-4bb2-869a-50e86a97a8d2"
   },
-  "newProjectRoot": "projects",
   "projects": {
     "css-task": {
       "projectType": "application",
-      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,11 +17,6 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "sourceMap": {
-              "scripts": true,
-              "styles": true,
-              "hidden": false
-            },
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -32,7 +27,8 @@
             ],
             "styles": [
               "src/styles.css"
-            ]
+            ],
+            "sourceMap": true
           },
           "configurations": {
             "production": {
@@ -41,26 +37,11 @@
                   "type": "initial",
                   "maximumWarning": "500kB",
                   "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all",
-              "production": {
-                "sourceMap": {
-                  "scripts": false,
-                  "styles": true,
-                  "hidden": false
-                },
-                "optimization": {
-                  "styles": {
-                    "minify": true,
-                    "inlineCritical": true
-                  }
-                }
+              "optimization": true,
+              "sourceMap": false
             },
             "development": {
               "optimization": false,
