@@ -1,8 +1,8 @@
 # JetBrains Internship Application - Tracing CSS back to Source
 ### Cascading Style Sheets Demo
-This project is a small demo of how CSS works and its cascading, overwriting nature.
+This project is a small demo of how CSS and its cascading nature works.
 
-## 🚀 Setup & Run Instructions
+## Setup & Run Instructions
 
 To get the project running locally:
 
