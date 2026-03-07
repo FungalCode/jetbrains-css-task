@@ -1,6 +1,6 @@
-# CssTask
-
-This project explores the relationship between authored CSS and computed browser styles using Angular 21.2.1. It features a dynamic SVG pyramid and a themed code display.
+# JetBrains Internship Application - Tracing CSS back to Source
+### Cascading Style Sheets Demo
+This project is a small demo of how CSS works and its cascading, overwriting nature.
 
 ## 🚀 Setup & Run Instructions
 
@@ -18,6 +18,17 @@ To get the project running locally:
    ```bash
    http://localhost:4200/
 
-Generated CSS: In Chrome DevTools, look at the Styles panel. For component styles, the location will often show as Internal <style> block or a reference to main.js. Disabling "CSS Source Maps" in DevTools settings reveals the raw, injected CSS
+## Angular CSS Transformation
+In Angular, the written CSS is strongly transformed before being sent to the browser.
+Angular uses View Encapsulation, which adds unique attributes to the component’s HTML elements and CSS selectors. 
+Because of that, styles don't affect other components or elements, which they are not supposed to. 
+The resulting CSS is then usually injected into the page inside a style-tag.
    
-CSS Location: inside dist/css-task/browser/
+## CSS Location: 
+The best way to view the source maps and generated css is to build the project.
+1. **Build:**
+   ```bash
+   npm run build
+
+2. **Find files:**
+the build files will be output inside dist/css-task/browser/
