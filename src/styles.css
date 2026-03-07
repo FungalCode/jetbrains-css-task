@@ -34,3 +34,7 @@ h1,h2,h3,p {
 p {
     color: red; font-size: 50px !important;
 }
+
+svg {
+    width: 100px;
+}
