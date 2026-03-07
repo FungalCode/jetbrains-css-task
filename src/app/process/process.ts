@@ -15,6 +15,7 @@ export class Process {
   level = signal(1);
   titles= ["HTML Elements", "Classes, Attributes", "IDs", "Inline Styles", "Important"]
   descriptions = ["div, p, h1", ".btn, [type=\"text\"], :hover", "#main, #profile", "style='color:red'", "color:blue !important"]
+  first = signal(false);
 
   handleMouseMove(event: MouseEvent) {
     const container = event.currentTarget as HTMLElement;
@@ -30,6 +31,9 @@ export class Process {
   addLevel() {
     if(this.level() < 5) {
       this.level.update(n => n + 1);
+      if(!this.first()) {
+        this.first.update(n => true);
+      }
     }
   }
   removeLevel() {

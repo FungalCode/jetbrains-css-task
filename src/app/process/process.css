@@ -27,7 +27,7 @@ section {
     width: 600px;
     height: 600px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 1.5rem;
     cursor: pointer;
 }
@@ -86,6 +86,16 @@ linearGradient stop {
 
 polygon, path, rect {
     transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.note {
+    position: absolute;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-family: 'Lora', serif;
+    top: -2.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
 }
 
 svg {

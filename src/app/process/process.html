@@ -20,7 +20,12 @@
                 @if (current < 5) {
                     <ng-container *ngTemplateOutlet="recursiveLevel; context: { val: current + 1 }"></ng-container>
                 }
-                <button (click)="removeLevel()">x</button>
+                @if (current > 1) {
+                    <button (click)="removeLevel()">x</button>
+                } @else if(level() == 1 && !first()) {
+                    <span class="note">Click Me!</span>
+                }
+
             </div>
         </ng-template>
     </div>
